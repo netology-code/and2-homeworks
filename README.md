@@ -2,7 +2,7 @@
 
 Важно: [Правила оформления вопросов, сообщений о ошибках и проблемах](report-requirements.md)
 
-Важно: [Примеры кода из лекций](https://github.com/netology-code/kt-code)
+Важно: [Примеры кода из лекций](https://github.com/netology-code/and2-code)
 
 ## Блок 1: Android Studio, разработка макетов приложения
 
