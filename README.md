@@ -8,19 +8,19 @@
 
 1.1 [x] [Android Studio, SDK, эмулятор и первое приложение](01_firstapp)
 
-1.2 [ ] [Ресурсы (обзор), View и ViewGroup (базовые layout’ы)](02_view)
+1.2 [x] [Ресурсы, View и ViewGroup](02_resources)
 
-1.3 [ ] [ConstraintLayout Mastering](03_contstraint_layout)
+1.3 [x] [ConstraintLayout](03_constraint_layout)
 
 ## Блок 2: Работа со списками и обработка событий
 
-2.1 [ ] [Обработка событий в Android](04_events)
+2.1 [x] [Обработка событий в Android](04_events)
 
-2.2 [ ] [Logcat, отладчик, создание авто-тестов](05_autotests)
+2.2 [x] [Архитектура: MVVM](05_mvvm)
 
-2.3 [ ] [Отображение списков: RecyclerView]()(06_lists)
+2.3 [x] [Отображение списков: RecyclerView](06_recyclerview)
 
-2.4 [ ] [CRUD: списки, добавление, удаление, изменение, фильтрация](07_crud)
+2.4 [x] [CRUD: списки, добавление, удаление, изменение](07_crud)
 
 ## Блок 3: Дизайн и навигация
 
