@@ -24,7 +24,7 @@
 
 ## Блок 3: Дизайн и навигация
 
-3.1 [ ] [Material Design](08_material)
+3.1 [x] [Material Design](08_material)
 
 3.2 [ ] [Организация навигации (перемещение между Activity)](09_navigation)
 
