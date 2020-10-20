@@ -26,9 +26,9 @@
 
 3.1 [x] [Material Design](08_material)
 
-3.2 [ ] [Организация навигации (перемещение между Activity)](09_navigation)
+3.2 [x] [Организация навигации (перемещение между Activity)](09_navigation)
 
-3.3 [ ] [SharedPreferences, Intents](10_intents)
+3.3 [ ] [Хранение данных](10_intents)
 
 3.4 [ ] [Fragments, FragmentManager](11_fragments)
 
