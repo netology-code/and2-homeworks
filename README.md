@@ -28,15 +28,15 @@
 
 3.2 [x] [Организация навигации (перемещение между Activity)](09_navigation)
 
-3.3 [ ] [Хранение данных](10_intents)
+3.3 [x] [Хранение данных](10_intents)
 
-3.4 [ ] [Fragments, FragmentManager](11_fragments)
+3.4 [x] [Fragments, FragmentManager](11_fragments)
 
 ## Блок 4: SQL, уведомления и Push’и
 
-4.1 [ ] [SQL и SQLite](12_sql)
+4.1 [x] [SQL и SQLite](12_sql)
 
-4.2 [ ] [Библиотека Room](13_room)
+4.2 [x] [Библиотека Room](13_room)
 
 4.3 [ ] [Notifications & Pushes](14_pushes)
 
