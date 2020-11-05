@@ -38,7 +38,7 @@
 
 4.2 [x] [Библиотека Room](13_room)
 
-4.3 [ ] [Notifications & Pushes](14_pushes)
+4.3 [x] [Notifications & Pushes](14_pushes)
 
 Доп.материалы: см. в репозитории [кодом](https://github.com/netology-code/and2-code).
 
