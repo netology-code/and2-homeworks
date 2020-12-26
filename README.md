@@ -41,5 +41,3 @@
 4.3 [x] [Notifications & Pushes](14_pushes)
 
 Доп.материалы: см. в репозитории [кодом](https://github.com/netology-code/and2-code).
-
-По всем вопросам: coursar
