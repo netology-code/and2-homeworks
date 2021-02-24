@@ -22,6 +22,8 @@
 
 ## Задача Code Like a Pro
 
+Для выполнения домашнего задания вам потребуется [скачать и установить Android Studio](https://github.com/netology-code/guides/blob/master/android/android_studio/instruction1.md).
+
 ### Легенда
 
 Мы будем вас сразу учить работать профессионально и современно.
