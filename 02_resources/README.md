@@ -70,8 +70,29 @@
 <summary>Под капотом</summary>
 
 Иконка указывается в манифесте:
-
+(атрибуты android:icon и android:roundIcon)
 ```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ru.netology.nmedia">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Root">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
 ```
 
 Эти значения ведут на файлы `mipmap/ic_launcher` и (`mipmap/ic_launcher_round`) соответственно. В зависимости от версии платформы это будут либо сгенерированные изображения в формате png, либо xml, в которых стоят ссылки на `foreground` и `background` ресурсы.
