@@ -24,4 +24,4 @@
 
 В качестве результата пришлите ссылку на ваш Pull Request в личном кабинете студента на сайте [netology.ru](https://netology.ru).
 
-После принятия задачи сделаете `merge` Pull Request'а.
+После принятия задачи сделайте `merge` Pull Request'а c веткой `master`.
