@@ -28,7 +28,7 @@
 
 3.2 [x] [Организация навигации (перемещение между Activity)](09_navigation)
 
-3.3 [x] [Хранение данных](10_intents)
+3.3 [x] [Хранение данных](10_storage)
 
 3.4 [x] [Fragments, FragmentManager](11_fragments)
 
