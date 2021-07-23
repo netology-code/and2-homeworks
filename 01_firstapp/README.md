@@ -119,9 +119,9 @@ Warning: Failed to read or create install properties file.
 Ваша задача на первое занятие достаточно простая: по примеру из лекции создать проект, с текстовой надписью на экране `NMedia!` вместо `Hello, World`
 
 При этом:
-* groupId: ru.netology
-* artifactId: nmedia
-* version: 1.0-SNAPSHOT
+* applicationId: ru.netology.nmedia
+* versionName: 1.0
+* minSdkVersion (минимальная поддерживаемая версия Android): 21 (Android 5.0)
 
 Для проекта настроить GitHub Actions и прислать ссылку на репозиторий в личном кабинете студента.
 
