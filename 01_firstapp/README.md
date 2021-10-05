@@ -156,7 +156,7 @@ jobs:
       - name: Build
         run: |
           chmod +x ./gradlew
-          ./gradlew build --info
+          ./gradlew build
 
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v2
