@@ -66,6 +66,30 @@
     * стартовать Activity с созданным Intent'ом
 </details>
 
+Если вас заинтересовала тема работы с внешними Intent в Android, то вам могут быть полезны методы [Intent.resolveActivity](https://developer.android.com/reference/android/content/Intent#resolveActivity(android.content.pm.PackageManager)) и [PackageManager.queryIntentActivities](https://developer.android.com/reference/android/content/pm/PackageManager#queryIntentActivities(android.content.Intent,%20int)).
+Они позволяют получить данные о том, какая активити будет запущена после отправки неявного Intent'а в метод `startActivity`. Например, подобным образом можно получить список приложений, которые могут обрабатывать Intent'ы, отправляемые из вашего приложения.
+   
+Для работы этих методов на Android 11 и выше необходимо в `AndroidManifest.xml` указать системе, что вы будете делать подобные запросы, а также перечислить их параметры.
+Например, для просмотра активити, которые обрабатывают `Intent.ACTION_VIEW` нужно прописать:
+
+```
+<manifest>
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="*" />
+        </intent>
+    </queries>
+</manifest>
+```
+   
+В таком случае с помощью методов выше можно увидеть, какое приложение (и какая активити в нем!) обработает ваш Intent. Для Intent просмотра видео на эмуляторе получается следующий результат:
+
+```
+   queryIntentActivities: [ResolveInfo{ebaf4b0 com.google.android.youtube/.UrlActivity o=1 m=0x508000}]
+   resolveActivity: ComponentInfo{com.google.android.youtube/com.google.android.youtube.UrlActivity}
+```
+
 Опубликуйте изменения в вашем проекте на GitHub. Удостоверьтесь, что apk собирается с помощью GitHub Actions и при установке в эмуляторе приложение работает корректно.
 
 В качестве результата пришлите ссылку на ваш GitHub-проект в личном кабинете студента на сайте [netology.ru](https://netology.ru).
