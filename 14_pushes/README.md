@@ -45,4 +45,63 @@
 
 В качестве результата пришлите ссылку на ваши GitHub-проекты (Android-приложение и Push-Sender) в личном кабинете студента на сайте [netology.ru](https://netology.ru).
 
-**Важно**: ни в коем случае не закидывайте в GitHub репозиторий учётные данные. Если вы всё-таки сделали это, то воспользуйтесь соответствующей [утилитой для их удаления](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/removing-sensitive-data-from-a-repository).
+**Важно**: ни в коем случае не закидывайте в GitHub репозиторий учётные данные (файл google-services.json). Если вы всё-таки сделали это, то воспользуйтесь соответствующей [утилитой для их удаления](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/removing-sensitive-data-from-a-repository).
+
+Для того, чтобы сохранить работоспособность GitHub Actions воспользуйтесь инструкцией ниже.
+
+<details>
+<summary>Инструкция для безопасного добавления google-services.json</summary>
+
+Вместо добавления файла в открытый доступ, можно добавить его в специальную секцию Secrets у репозитория. Она доступна только соавторам репозитория и не появится публично.
+
+1. Откройте настройки вашего репозитория. В них перейдите в секцию Secrets.
+  ![secrets](pic/secrets.png)
+1. Нажмите на кнопку "New repository secret". В появившемся окне введите название и содержимое secret.
+1. Название можно поставить любое. Для примера будем использовать имя `FIREBASE_SECRET`. В качестве содержимого вставьте полный текст вашего файла google-services.json. После этого нажмите "Add secret".
+  ![add_secret](pic/add_secret.png)
+1. Теперь нужно дополнить yml-скрипт GitHub Actions командой для получения secret:
+  
+```
+- name: Decode google-services.json
+  env:
+    FIREBASE_SECRET: ${{ secrets.FIREBASE_SECRET }}
+  run: echo $FIREBASE_SECRET > ./app/google-services.json
+```
+
+Если вы использовали скрипт из наших заданий, то полный текст скрипта станет следующим:
+  
+```
+name: CI
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Decode google-services.json
+        env:
+          FIREBASE_SECRET: ${{ secrets.FIREBASE_SECRET }}
+        run: echo $FIREBASE_SECRET > ./app/google-services.json
+
+      - name: Build
+        run: |
+          chmod +x ./gradlew
+          ./gradlew build
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: app-debug.apk
+          path: app/build/outputs/apk/debug/app-debug.apk
+```
+
+После выполнения всех этих действий для каждого запуска GitHub Actions файл google-services.json будет формироваться из созданного secret, в репозитории он храниться не будет.
+</details>
