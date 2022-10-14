@@ -85,7 +85,7 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Decode google-services.json
         env:
@@ -97,7 +97,7 @@ jobs:
           chmod +x ./gradlew
           ./gradlew build
       - name: Upload Build Artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: app-debug.apk
           path: app/build/outputs/apk/debug/app-debug.apk
