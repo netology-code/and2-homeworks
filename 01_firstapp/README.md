@@ -53,7 +53,7 @@ GitHub Actions устроен следующим образом: по насту
 Они описываются в yaml-файле в формате:
 ```yaml
 - name: Имя шага
-  uses: actions/checkout@v2 # или actions/upload-artifact@v2
+  uses: actions/checkout@v2 # или actions/upload-artifact@v3
   with:
     # набор опций, специфичный для конкретного Action'а
 ```
@@ -151,7 +151,7 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Build
         run: |
@@ -159,7 +159,7 @@ jobs:
           ./gradlew build
 
       - name: Upload Build Artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: app-debug.apk
           path: app/build/outputs/apk/debug/app-debug.apk
