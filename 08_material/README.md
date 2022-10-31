@@ -40,7 +40,7 @@
 <details>
 <summary>Подсказка</summary>
 
-Пример реализации [на странице документации](https://material.io/develop/android/components/buttons) в разделе "Implementing an icon-only toggle button".
+Пример реализации [на странице документации](https://m2.material.io/components/buttons/android#toggle-button) в разделе "Implementing an icon-only toggle button".
 </details>
 
 В качестве результата пришлите ссылку на ваш GitHub проект в личном кабинете студента на сайте [netology.ru](https://netology.ru).
