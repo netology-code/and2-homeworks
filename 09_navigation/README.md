@@ -69,11 +69,15 @@
 Если вас заинтересовала работа с внешними Intent в Android, вам могут быть полезны методы [Intent.resolveActivity](https://developer.android.com/reference/android/content/Intent#resolveActivity(android.content.pm.PackageManager)) и [PackageManager.queryIntentActivities](https://developer.android.com/reference/android/content/pm/PackageManager#queryIntentActivities(android.content.Intent,%20int)).
 Они позволяют получить данные о том, какая активити будет запущена после отправки неявного Intent в метод `startActivity`. Так можно получить список приложений, которые обрабатывают Intent, отправляемые из вашего приложения.
    
-Для работы этих методов на Android 11 и выше необходимо в `AndroidManifest.xml` указать системе, что вы будете делать подобные запросы, и перечислить их параметры.
-Для просмотра активити, которые обрабатывают `Intent.ACTION_VIEW`, нужно прописать:
+Для работы этих методов на Android 11 и выше необходимо в `AndroidManifest.xml` добавить параметр queries, чтобы указать системе, что вы будете делать подобные запросы, и перечислить их параметры.
+Для просмотра "активитей", которые обрабатывают `Intent.ACTION_VIEW`, нужно прописать:
 
 ```
 <manifest>
+    <application>
+    ...
+    </application>
+
     <queries>
         <intent>
             <action android:name="android.intent.action.VIEW" />
