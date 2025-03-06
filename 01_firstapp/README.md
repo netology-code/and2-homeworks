@@ -49,7 +49,7 @@
 Они описываются в yaml-файле в формате:
 ```yaml
 - name: Имя шага
-  uses: actions/checkout@v2 # или actions/upload-artifact@v3
+  uses: actions/checkout@v3 # или actions/upload-artifact@v4
   with:
     # набор опций, специфичный для конкретного Action
 ```
@@ -153,7 +153,7 @@ jobs:
           ./gradlew build
 
       - name: Upload Build Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: app-debug.apk
           path: app/build/outputs/apk/debug/app-debug.apk
