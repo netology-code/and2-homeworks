@@ -110,7 +110,7 @@ Warning: Failed to read or create install properties file.
 При этом:
 * applicationId: ru.netology.nmedia
 * versionName: 1.0
-* minSdk (минимальная версия Android): 23 (Android 6.0)
+* minSdk (минимальная версия Android): 24 (Android 7.0)
 
 Настройте GitHub Actions и отправьте ссылку на репозиторий в личном кабинете студента.
 
