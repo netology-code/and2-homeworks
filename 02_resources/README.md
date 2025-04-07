@@ -38,11 +38,11 @@
 
 ![](pic/asset01.png)
 
-2\. Выберите изображение (1) и переместите ползунок Resize (2), пока логотип не будет попадать в границы — они отмечены серым цветом:
+2\. Выберите изображение и переместите ползунок Resize, пока логотип не будет попадать в границы — они отмечены серым цветом:
 
 ![](pic/asset02.png)
 
-3\. Перейдите на вкладку Background Layer (1), выберите Asset Type — Color (2) и поставьте цвет — FFFFFF (3):
+3\. Перейдите на вкладку Background Layer, выберите Asset Type — Color и поставьте цвет — FFFFFF:
 
 ![](pic/asset03.png)
 
@@ -54,13 +54,9 @@
 
 ![](pic/asset05.png)
 
-6\. Удалите старые файлы (с иконкой Android):
+6\. Запустите ваше приложение в эмуляторе и убедитесь, что иконка приложения изменилась.
 
 ![](pic/asset06.png)
-
-7\. Запустите ваше приложение в эмуляторе и убедитесь, что иконка приложения изменилась.
-
-![](pic/asset07.png)
 
 Если при сборке возникают ошибки, нажмите два раза Ctrl, выполните `gradlew clean` и соберите заново
 
@@ -71,16 +67,21 @@
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ru.netology.nmedia">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        android:theme="@style/Theme.NMedia"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
