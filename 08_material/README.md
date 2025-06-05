@@ -29,18 +29,16 @@
 
 ### Задача
 
-На лекции мы стилизовали Like в виде `CheckBox`, а затем в виде `Button`. Вам также нужно стилизовать кнопки Share и Options — меню с тремя точками.
+На лекции мы стилизовали Like в виде `Button`. Вам также нужно стилизовать кнопки Share и Options (меню с тремя точками).
 
-Изучите документацию на компоненты [Buttons](https://material.io/develop/android/components/buttons), чтобы реализовать работу этих элементов. Обратите внимание: это не `CheckBox`.
+Изучите документацию на компоненты [Buttons](https://github.com/material-components/material-components-android/blob/master/docs/components/Button.md), чтобы реализовать работу этих элементов. Обратите внимание, что для этих кнопок не нужно делать концепцию Toggle Button.
 
-Текст можно задавать сразу через атрибуты кнопки (количество лайков, шеринга). Поэтому от `TextView` можно будет избавиться.
-
-Создайте отдельный стиль, как мы сделали на лекции, и назначайте его кнопкам.
+Текст с количеством (для лайков и репостов) можно задавать сразу через атрибуты Button, поэтому от `TextView` рядом с кнопками можно избавиться.
 
 <details>
 <summary>Подсказка</summary>
 
-Пример реализации [на странице документации](https://m2.material.io/components/buttons/android#toggle-button) в разделе «Implementing an icon-only toggle button».
+Пример реализации [на странице документации](https://github.com/material-components/material-components-android/blob/master/docs/components/Button.md#icon-button) в разделе «Icon button».
 </details>
 
 В качестве результата пришлите ссылку на ваш GitHub-проект в личном кабинете студента на сайте [netology.ru](https://netology.ru).
