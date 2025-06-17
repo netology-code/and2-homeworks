@@ -66,6 +66,9 @@
     * стартовать Activity с созданным Intent.
 </details>
 
+<details>
+<summary>Примечания</summary>
+
 Если вас заинтересовала работа с внешними Intent в Android, вам могут быть полезны методы [Intent.resolveActivity](https://developer.android.com/reference/android/content/Intent#resolveActivity(android.content.pm.PackageManager)) и [PackageManager.queryIntentActivities](https://developer.android.com/reference/android/content/pm/PackageManager#queryIntentActivities(android.content.Intent,%20int)).
 Они позволяют получить данные о том, какая активити будет запущена после отправки неявного Intent в метод `startActivity`. Так можно получить список приложений, которые обрабатывают Intent, отправляемые из вашего приложения.
    
@@ -93,6 +96,7 @@
    queryIntentActivities: [ResolveInfo{ebaf4b0 com.google.android.youtube/.UrlActivity o=1 m=0x508000}]
    resolveActivity: ComponentInfo{com.google.android.youtube/com.google.android.youtube.UrlActivity}
 ```
+</details>
 
 Опубликуйте изменения в вашем проекте на GitHub. Убедитесь, что apk собирается с помощью GitHub Actions и при установке в эмуляторе приложение работает корректно.
 
