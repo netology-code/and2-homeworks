@@ -32,12 +32,14 @@
 
 3.4 [x] [Fragments, FragmentManager](11_fragments)
 
-## Блок 4: SQL, уведомления и Push’и
+## Блок 4: SQL, уведомления, Push’и и MVI
 
 4.1 [x] [SQL и SQLite](12_sql)
 
 4.2 [x] [Библиотека Room](13_room)
 
 4.3 [x] [Notifications & Pushes](14_pushes)
+
+4.4 [x] [MVC, MVI](15_mvi)
 
 Доп.материалы: см. в репозитории [кодом](https://github.com/netology-code/and2-code).
