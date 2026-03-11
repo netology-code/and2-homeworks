@@ -115,7 +115,7 @@ Warning: Failed to read or create install properties file.
 Настройте GitHub Actions и отправьте ссылку на репозиторий в личном кабинете студента.
 
 <details>
-<summary>Описание шагов выполнения</summary>
+<summary>Описание шагов выполнения (GitHub)</summary>
 
 1\. Публикуете свой проект на GitHub.
 
@@ -164,5 +164,68 @@ jobs:
 ![](pic/build.png)
 
 [Пример настроенного проекта](https://github.com/netology-code/and2ci).
+
+</details>
+
+<details>
+<summary>Описание шагов выполнения (GitVerse)</summary>
+
+1\. Публикуете свой проект на GitVerse.
+
+2\. Переходите на вкладку CI и выберите создать workflow с нуля:
+
+![](pic/ci_gitverse.png)
+
+3\. Вставьте этот вариант в соответствующее поле и нажмите сохранить (о предназначении читайте в разделе «Справка» выше):
+
+```yaml
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: 17
+          distribution: 'temurin'
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
+      - name: Build with Gradle
+        run: ./gradlew build
+
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-debug.apk
+          path: app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: warn
+```
+
+4\. Убедитесь, что сборка запустилась
+
+![](pic/build_started_gitverse.png)
+
+5\. Если нет, то проверьте настройки репозитория:
+
+![](pic/project_settings_gitverse.png)
+
+CI/CD должен быть включён.
+
+6\. Убедитесь в успешной сборке проекта:
+
+![](pic/build_succed_gitverse.png)
 
 </details>
